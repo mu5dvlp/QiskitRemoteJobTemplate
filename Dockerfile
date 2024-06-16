@@ -13,7 +13,7 @@ RUN apt-get update && apt-get install -y \
     && rm -rf /var/lib/apt/lists/*
 
 # スクリプトをコピー
-COPY main.ipynb /app/
+COPY bellState.ipynb /app/
 
 # //ーーーーーーーーーーーーーーーーーーーーー
 # pipをアップグレード
