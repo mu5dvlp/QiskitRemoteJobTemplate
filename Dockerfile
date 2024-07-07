@@ -15,6 +15,7 @@ RUN apt-get update && apt-get install -y \
 # ファイルをコピー
 COPY bellState.ipynb \
     hadamardTest.ipynb \
+    StressTest.ipynb \
     requirements.txt \
     /app/
 
