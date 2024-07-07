@@ -1,0 +1,10 @@
+qiskit
+qiskit_aer
+qiskit_optimization
+qiskit_ibm_runtime
+
+matplotlib
+pylatexenc
+seaborn
+
+notebook

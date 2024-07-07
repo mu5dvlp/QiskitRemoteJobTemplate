@@ -13,26 +13,14 @@ RUN apt-get update && apt-get install -y \
     && rm -rf /var/lib/apt/lists/*
 
 # スクリプトをコピー
-COPY bellState.ipynb hadamardTest.ipynb /app/
+COPY bellState.ipynb \
+hadamardTest.ipynb \
+/app/
 
 # //ーーーーーーーーーーーーーーーーーーーーー
 # pipをアップグレード
 RUN pip install --upgrade pip
-
-# 〜〜〜
-# qiskitのインストール
-RUN pip install qiskit qiskit_aer qiskit_optimization qiskit_ibm_runtime
-
-# 回路図などの画像生成用
-RUN pip install matplotlib
-RUN pip install pylatexenc
-
-# plot_state_qshpere用
-RUN pip install seaborn
-
-# 〜〜〜
-# jupyter notebookのインストール
-RUN pip install notebook
+RUN pip install --no-cache-dir -r requirements.txt
 
 # //ーーーーーーーーーーーーーーーーーーーーー
 # Jupyter Notebookを起動するコマンドを指定
